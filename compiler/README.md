@@ -1,6 +1,6 @@
 # Building with ct-ng
 
-This section will have a short 
+To build the cross compiler you need to do the following:
 
-### Sh
-
+`ct-ng menuconfig`
+- Replace the top dir of entries in `paths and misc options` with ${CT_TOP_DIR}
