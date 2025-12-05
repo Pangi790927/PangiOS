@@ -1,0 +1,4 @@
+target remote :1234
+symbol-file x86/isodir/boot/x86_64-kernel.bin
+break _start
+continue
