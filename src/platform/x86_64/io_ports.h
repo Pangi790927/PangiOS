@@ -1,3 +1,6 @@
+#ifndef IO_PORTS_H
+#define IO_PORTS_H
+
 inline void outb (uint16_t port, uint8_t data) {
     asm volatile ("outb %0, %1" : : "a"(data), "Nd"(port));
 }
@@ -37,3 +40,5 @@ inline void io_wait() {
     // does the register need to be zeroed? (question on OSDev)
     asm volatile ("outb %%al, $0x80" : : "a"(0));
 }
+
+#endif

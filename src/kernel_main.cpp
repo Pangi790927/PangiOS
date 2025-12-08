@@ -41,10 +41,6 @@ namespace serial
                 FIFO_RX_CLEAR_BIT | FIFO_TX_CLEAR_BIT);
     }
 
-    void uninit() {
-        // ...
-    }
-
     void sendchr (char chr) {
         while (!(inb(LSR) & TX_READY))
             {}
