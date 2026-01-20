@@ -1,6 +1,8 @@
 #ifndef IO_PORTS_H
 #define IO_PORTS_H
 
+#include <stdint.h>
+
 inline void outb (uint16_t port, uint8_t data) {
     asm volatile ("outb %0, %1" : : "a"(data), "Nd"(port));
 }
